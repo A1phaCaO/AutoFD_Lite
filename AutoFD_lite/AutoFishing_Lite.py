@@ -6,7 +6,7 @@ import numpy as np
 # 如果运行程序无论如何打印参数都为1.00需要自行截图替换文件夹中的template.png文件
 
 # ---配置---
-RESOLUTION = (2560, 1600) # 电脑分辨率
+RESOLUTION = (1920, 1080) # 电脑分辨率
 STD = 0.28 # 识别的方差
 TEMPLATE_PATH = r'template.png' # 模板图片
 SHOT_SCALE = 1.25 # 截图区域占屏幕的区域 2为一半 1.5为1/4 1为无
@@ -41,6 +41,6 @@ while 1:
         pyautogui.click(button='right')
         time.sleep(0.7)
         pyautogui.click(button='right')
-        time.sleep(1.5)
+        time.sleep(2)
     elif i % PRINT_INTERVAL == 0:
         print(f'\r状态:未发现鱼[{format(upper_, ".2f")}] 已运行时间: {time.strftime("%H:%M:%S", time.gmtime(time.time()-start_time))} 已钓上{t}条鱼', end='')
